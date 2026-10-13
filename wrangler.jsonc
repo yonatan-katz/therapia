@@ -1,0 +1,10 @@
+{
+  // Cloudflare Workers static-assets config. No Worker script ("main") —
+  // this deploys the contents of ./public as a plain static site.
+  // Deploy command (used by Cloudflare's build flow): `npx wrangler deploy`
+  "name": "therapia",
+  "compatibility_date": "2025-06-01",
+  "assets": {
+    "directory": "./public"
+  }
+}

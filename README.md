@@ -7,12 +7,13 @@ Plain static site (HTML/CSS/JS). No build step, no framework, no dependencies. D
 ## Quick start (preview locally)
 
 ```bash
-cd therapia
+cd therapia/public
 python3 -m http.server 8080
 # then open http://localhost:8080
 ```
 
-Or just open `index.html` in a browser (the intro video and fonts work best via the local server above).
+The site lives in **`public/`** (that's the web root Cloudflare serves — see `wrangler.jsonc`).
+Edit `public/index.html`, `public/config.js`, and files under `public/assets/`.
 
 ## Going live — the one file to edit
 
