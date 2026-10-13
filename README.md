@@ -47,16 +47,28 @@ A custom domain (e.g. `hannakatz.ca`) can be pointed at any of these.
 | `index.html` | All page copy, drawn from Hanna's bio. Edit text directly here. |
 | `assets/img/tree.png` | Watercolour tree brand art (from the LinkedIn banner). |
 | `assets/img/banner-full.png` | Full banner, used as the social-share preview image. |
-| `assets/video/intro.mp4` | Hanna's intro video, web-optimised (4.4 MB, portrait). |
-| `assets/video/intro-poster.jpg` | Video poster frame. |
+| `assets/img/services/*.webp` | Hand-sketch illustrations, one per service card. |
+| `assets/img/about-hanna.webp` | **Placeholder** illustration in the About section. |
 | `assets/img/favicon.svg` | Tree favicon. |
 
-### Replacing the intro video
-Drop a new file at `assets/video/intro.mp4` and a poster at `assets/video/intro-poster.jpg`. To re-compress a large source:
+### Hanna's portrait (About section)
+`assets/img/about-hanna.webp` is a **placeholder sketch**. Once Hanna shares a photo, it
+can be turned into a matching hand-sketch portrait and dropped in at the same path.
+
+### The service sketches & the generator
+The five service illustrations were generated to match the brand (soft pencil + watercolour,
+muted earthy palette) via an OpenRouter image model, using `tools/generate-sketch.py`.
+It reuses the OpenRouter key from the sibling `indie` repo's `.env`.
+
 ```bash
-ffmpeg -i source.mp4 -vf "scale=-2:960" -c:v libx264 -crf 30 -movflags +faststart -c:a aac -b:a 96k assets/video/intro.mp4
-ffmpeg -ss 10 -i source.mp4 -frames:v 1 -vf "scale=-2:960" assets/video/intro-poster.jpg
+python3 tools/generate-sketch.py check          # confirm the key loads
+python3 tools/generate-sketch.py gen --out new.png \
+  --prompt "soft pencil + watercolour, muted earthy palette, cream background, no text — <scene>"
+# then optimise + place:
+cwebp -q 80 -resize 1100 0 new.png -o assets/img/services/<name>.webp
 ```
+Note: the image model's safety filter blocks prompts depicting children's faces — frame such
+scenes from behind or with faces not visible (as the "Families" sketch does).
 
 ## Notes
 - **English-only v1.** Copy and markup are structured so Hebrew (RTL), Russian & Ukrainian can be added later.

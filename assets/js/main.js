@@ -60,6 +60,10 @@
     menu.querySelectorAll("a").forEach(function (a) {
       a.addEventListener("click", function () { setOpen(false); });
     });
+    // Close the menu if the viewport grows to desktop width.
+    window.addEventListener("resize", function () {
+      if (window.innerWidth > 920 && toggle.getAttribute("aria-expanded") === "true") setOpen(false);
+    });
   }
 
   /* ---- Nav shadow on scroll ---- */
@@ -69,19 +73,6 @@
   };
   onScroll();
   window.addEventListener("scroll", onScroll, { passive: true });
-
-  /* ---- Intro video ---- */
-  var video = document.getElementById("introVideo");
-  var playBtn = document.getElementById("videoPlay");
-  var card = video ? video.closest(".video-card") : null;
-  if (video && playBtn && card) {
-    playBtn.addEventListener("click", function () {
-      video.play();
-    });
-    video.addEventListener("play", function () { card.classList.add("is-playing"); });
-    video.addEventListener("pause", function () { card.classList.remove("is-playing"); });
-    video.addEventListener("ended", function () { card.classList.remove("is-playing"); });
-  }
 
   /* ---- Scroll reveal ---- */
   var revealTargets = document.querySelectorAll(
