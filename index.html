@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hanna Katz, RCC · Art-Based Counselling for Teens, Young Adults & Families</title>
+  <meta name="description" content="Hanna Katz is a Registered Clinical Counsellor (RCC) in Greater Vancouver offering warm, trauma-informed, art-based counselling for teens, young adults and families. Virtual sessions in English, Hebrew, Russian and Ukrainian." />
+  <meta name="theme-color" content="#f4f1e8" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Hanna Katz, RCC — Art-Based Counselling" />
+  <meta property="og:description" content="Some feelings are too big for words. Art can give them a voice. Counselling for teens, young adults & families." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="assets/img/banner-full.png" />
+
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml" />
+
+  <!-- Fonts: Fraunces (headings), Nunito Sans (body), Caveat (handwritten accent) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Nunito+Sans:wght@400;600;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- ===================== NAV ===================== -->
+  <header class="nav" id="nav">
+    <div class="wrap nav__inner">
+      <a class="brand" href="#top" aria-label="Hanna Katz, Registered Clinical Counsellor — home">
+        <span class="brand__mark" aria-hidden="true">
+          <svg viewBox="0 0 40 40" width="34" height="34"><use href="#logo-tree"></use></svg>
+        </span>
+        <span class="brand__text">
+          <span class="brand__name">Hanna Katz</span>
+          <span class="brand__sub">Registered Clinical Counsellor</span>
+        </span>
+      </a>
+
+      <nav class="nav__links" aria-label="Primary">
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#how">How it works</a>
+        <a href="#credentials">Credentials</a>
+        <a href="#faq">FAQ</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <a class="btn btn--primary nav__cta" data-book href="#contact">Book online</a>
+
+      <button class="nav__toggle" id="navToggle" aria-expanded="false" aria-controls="mobileMenu" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <div class="mobile-menu" id="mobileMenu" hidden>
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#how">How it works</a>
+      <a href="#credentials">Credentials</a>
+      <a href="#faq">FAQ</a>
+      <a href="#contact">Contact</a>
+      <a class="btn btn--primary" data-book href="#contact">Book online</a>
+    </div>
+  </header>
+
+  <main id="main">
+    <span id="top"></span>
+
+    <!-- ===================== HERO ===================== -->
+    <section class="hero" aria-labelledby="hero-title">
+      <span class="blob blob--sun" aria-hidden="true"></span>
+      <span class="blob blob--blush" aria-hidden="true"></span>
+      <span class="blob blob--sky" aria-hidden="true"></span>
+      <div class="wrap hero__grid">
+        <div class="hero__copy">
+          <p class="eyebrow">Art-based counselling · Greater Vancouver</p>
+          <h1 id="hero-title" class="hero__title">
+            Some feelings are<br>too big for words.
+            <span class="script">Art can give them a voice.</span>
+          </h1>
+          <p class="hero__lead">
+            Warm, trauma-informed counselling for <strong>teens, young adults&nbsp;&amp; families</strong> —
+            a safe space to feel truly seen, reconnect with your strength, and move forward with hope.
+          </p>
+          <ul class="lang-row" aria-label="Languages offered">
+            <li>English</li><li>עברית</li><li>Русский</li><li>Українська</li>
+          </ul>
+          <div class="hero__actions">
+            <a class="btn btn--primary btn--lg" data-book href="#contact">Book online</a>
+            <a class="btn btn--ghost btn--lg" href="#meet">Meet Hanna</a>
+          </div>
+          <p class="hero__note">Virtual sessions now · in-person in Greater Vancouver by arrangement</p>
+        </div>
+        <div class="hero__art">
+          <img src="assets/img/tree.png" alt="A hand-painted watercolour tree with coloured fruit and a paintbrush at its roots" width="500" height="396" />
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== TRUST BAR ===================== -->
+    <section class="trust" aria-label="Credentials at a glance">
+      <div class="wrap trust__row">
+        <div class="trust__item"><strong>RCC</strong><span>Registered Clinical Counsellor</span></div>
+        <div class="trust__item"><strong>BCACC&nbsp;#29269</strong><span>Member in good standing</span></div>
+        <div class="trust__item"><strong>15+ years</strong><span>Supporting youth &amp; families</span></div>
+        <div class="trust__item"><strong>Adlerian</strong><span>Belonging · encouragement · strengths</span></div>
+        <div class="trust__item"><strong>4 languages</strong><span>EN · HE · RU · UK</span></div>
+      </div>
+    </section>
+
+    <!-- ===================== ABOUT / MEET ===================== -->
+    <section class="section about" id="about" aria-labelledby="about-title">
+      <div class="wrap about__grid">
+        <div class="about__media" id="meet">
+          <div class="video-card">
+            <video id="introVideo" poster="assets/video/intro-poster.jpg" preload="none" playsinline controls>
+              <source src="assets/video/intro.mp4" type="video/mp4" />
+              Your browser doesn’t support embedded video.
+            </video>
+            <button class="video-play" id="videoPlay" aria-label="Play Hanna’s introduction">
+              <svg viewBox="0 0 24 24" width="30" height="30" aria-hidden="true"><path d="M8 5v14l11-7z" fill="currentColor"/></svg>
+            </button>
+          </div>
+          <p class="video-cap">A short hello from Hanna</p>
+        </div>
+        <div class="about__copy">
+          <p class="kicker">About Hanna</p>
+          <h2 id="about-title">Helping people feel truly seen</h2>
+          <p>For over <strong>15 years</strong> I’ve walked alongside adolescents, young adults, and families through emotional challenges, stress, crisis, and big life changes. My work is about helping people reconnect with their inner strength and move forward with hope.</p>
+          <p>I’m a <strong>Registered Clinical Counsellor (RCC)</strong> and psychotherapist. In my sessions I bring together talking and creating art. When words are hard to find — especially for children and teenagers — art can open a door. Through images, we gently explore what’s happening inside, at your own pace.</p>
+          <p class="about__personal">I’ve immigrated twice, learned new languages more than once, and found my place again. I know how hard that can be, especially for young people — and as a mother of two sons, I’ve lived it as a parent too. I believe every person carries the strength to heal and grow. Sometimes they just need a safe space, and someone to walk beside them.</p>
+          <blockquote class="pullquote">“No art skill needed — art is simply another way to say what’s hard to put into words.”</blockquote>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== SERVICES ===================== -->
+    <section class="section services" id="services" aria-labelledby="services-title">
+      <div class="wrap">
+        <div class="section__head">
+          <p class="kicker">How I can help</p>
+          <h2 id="services-title">Counselling, rooted in belonging</h2>
+          <p class="section__intro">Grounded in <strong>Adlerian Individual Psychology</strong> — an approach built on belonging, encouragement, and each person’s strengths — and always trauma-informed, compassionate, and culturally responsive.</p>
+        </div>
+        <div class="cards">
+          <article class="card">
+            <span class="card__dot" style="--dot:var(--sage)"></span>
+            <h3>Children &amp; teens</h3>
+            <p>A gentle, creative space for young people facing anxiety, stress, self-esteem, friendships, or big changes — meeting them where words run out.</p>
+          </article>
+          <article class="card">
+            <span class="card__dot" style="--dot:var(--sky)"></span>
+            <h3>Young adults &amp; adults</h3>
+            <p>Support through life transitions, identity, stress, and the weight of starting over — finding footing and a way forward.</p>
+          </article>
+          <article class="card">
+            <span class="card__dot" style="--dot:var(--blush)"></span>
+            <h3>Couples</h3>
+            <p>A steady place to be heard, rebuild connection, and understand the patterns between you with care and honesty.</p>
+          </article>
+          <article class="card">
+            <span class="card__dot" style="--dot:var(--gold)"></span>
+            <h3>Families</h3>
+            <p>Help for families under strain — communication, parenting support, and navigating crisis or change together.</p>
+          </article>
+          <article class="card card--wide">
+            <span class="card__dot" style="--dot:var(--teal)"></span>
+            <h3>Art-based therapy <span class="tag">coming soon</span></h3>
+            <p>Combining talk and art-making to explore feelings safely. Hanna is completing her Graduate Diploma in Art Therapy at the Vancouver Art Therapy Institute (VATI); dedicated art-therapy sessions will open as the program completes.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== WHO / SPECIALTIES ===================== -->
+    <section class="section specialties" aria-labelledby="spec-title">
+      <div class="wrap">
+        <div class="section__head">
+          <p class="kicker">Common reasons people reach out</p>
+          <h2 id="spec-title">You don’t have to carry it alone</h2>
+        </div>
+        <ul class="chips">
+          <li>Anxiety &amp; stress</li>
+          <li>Immigration &amp; cultural transitions</li>
+          <li>Self-esteem &amp; belonging</li>
+          <li>Crisis &amp; big life changes</li>
+          <li>School &amp; peer struggles</li>
+          <li>Grief &amp; loss</li>
+          <li>Parenting support</li>
+          <li>Identity &amp; growing up</li>
+          <li>Family conflict</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ===================== HOW IT WORKS ===================== -->
+    <section class="section how" id="how" aria-labelledby="how-title">
+      <div class="wrap">
+        <div class="section__head">
+          <p class="kicker">Getting started</p>
+          <h2 id="how-title">How it works</h2>
+        </div>
+        <ol class="steps">
+          <li class="step">
+            <span class="step__num">1</span>
+            <h3>Reach out</h3>
+            <p>Send a message through the form below, or book directly online when you’re ready. A brief first contact helps us see if we’re a good fit.</p>
+          </li>
+          <li class="step">
+            <span class="step__num">2</span>
+            <h3>We meet online</h3>
+            <p>Sessions happen over secure video, wherever you feel comfortable. In-person sessions in Greater Vancouver can be arranged as the practice grows.</p>
+          </li>
+          <li class="step">
+            <span class="step__num">3</span>
+            <h3>We work at your pace</h3>
+            <p>Through conversation and creativity, we explore what matters — gently, and with deep respect for your story and your timing.</p>
+          </li>
+        </ol>
+        <div class="how__cta">
+          <a class="btn btn--primary btn--lg" data-book href="#contact">Book online</a>
+          <p class="how__note">Online booking is powered by Jane, a secure, PIPEDA-compliant platform.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== CREDENTIALS ===================== -->
+    <section class="section credentials" id="credentials" aria-labelledby="cred-title">
+      <div class="wrap credentials__grid">
+        <div class="section__head section__head--left">
+          <p class="kicker">Training &amp; experience</p>
+          <h2 id="cred-title">Credentials</h2>
+          <p class="section__intro">A career built across two countries, schools, and private practice — always centred on young people and families.</p>
+        </div>
+        <ul class="cred-list">
+          <li><strong>Registered Clinical Counsellor (RCC)</strong> — BC Association of Clinical Counsellors, member #29269.</li>
+          <li><strong>13+ years in private practice</strong> (since 2013), grounded in Adlerian Individual Psychology.</li>
+          <li><strong>Secondary school counsellor, Israel</strong> — crisis intervention, risk assessment, and family support.</li>
+          <li><strong>District Counsellor Instructor</strong>, Israeli Ministry of Education — trained and supervised school counsellors and developed prevention programs for at-risk youth.</li>
+          <li><strong>Graduate Diploma in Art Therapy</strong> (in progress) — Vancouver Art Therapy Institute (VATI).</li>
+          <li><strong>Additional training</strong> — CBT, and Mental Health First Aid in Stress &amp; Crisis.</li>
+          <li><strong>M.A.</strong> — Tel Aviv University.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ===================== FAQ ===================== -->
+    <section class="section faq" id="faq" aria-labelledby="faq-title">
+      <div class="wrap">
+        <div class="section__head">
+          <p class="kicker">Good to know</p>
+          <h2 id="faq-title">Frequently asked</h2>
+        </div>
+        <div class="faq__list">
+          <details>
+            <summary>Which languages do you offer counselling in?</summary>
+            <p>Sessions are available in <strong>English</strong>, and counselling is also offered in <strong>Hebrew, Russian, and Ukrainian</strong>.</p>
+          </details>
+          <details>
+            <summary>Are sessions online or in person?</summary>
+            <p>Right now sessions are <strong>virtual</strong>, over secure video. In-person sessions in the Greater Vancouver area can be arranged — just ask when you reach out.</p>
+          </details>
+          <details>
+            <summary>Who do you work with?</summary>
+            <p>Children, teens, young adults, and adults, as well as couples and families. I have particular experience supporting young people and families through transition and crisis.</p>
+          </details>
+          <details>
+            <summary>Do I need to be “good at art”?</summary>
+            <p>Not at all. There’s nothing to get right. Art is simply another way to express what can be hard to say — and it’s always optional.</p>
+          </details>
+          <details>
+            <summary>How do I book a session?</summary>
+            <p>Use the <strong>Book online</strong> button or the contact form below. Once booking is live, you’ll be able to choose a time directly through the secure Jane platform.</p>
+          </details>
+          <details>
+            <summary>Can RCC counselling be covered by my benefits?</summary>
+            <p>Many extended health plans provide coverage for services from a Registered Clinical Counsellor (RCC). Please check your specific plan — details on fees and receipts will be confirmed when you book.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== CONTACT ===================== -->
+    <section class="section contact" id="contact" aria-labelledby="contact-title">
+      <span class="blob blob--sky blob--sm" aria-hidden="true"></span>
+      <div class="wrap contact__grid">
+        <div class="contact__copy">
+          <p class="kicker">Reach out</p>
+          <h2 id="contact-title">Let’s talk about how I can help</h2>
+          <p>If you, your teen, or your family are going through a difficult time, you don’t have to carry it alone. Send a note below and Hanna will get back to you to talk about next steps.</p>
+          <a class="btn btn--primary btn--lg" data-book href="#contact-form">Book online</a>
+          <p class="contact__link-row" id="contactEmailRow" hidden>
+            Prefer email? <a id="contactEmailLink" href="#">Write to Hanna</a>
+          </p>
+          <p class="contact__link-row">
+            Or connect on <a id="linkedinLink" href="#" target="_blank" rel="noopener">LinkedIn</a>.
+          </p>
+        </div>
+
+        <form class="contact__form" id="contactForm" novalidate>
+          <div id="contact-form"></div>
+          <div class="field">
+            <label for="name">Your name</label>
+            <input id="name" name="name" type="text" autocomplete="name" required />
+          </div>
+          <div class="field">
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" autocomplete="email" required />
+          </div>
+          <div class="field">
+            <label for="lang">Preferred language</label>
+            <select id="lang" name="preferred_language">
+              <option>English</option>
+              <option>Hebrew / עברית</option>
+              <option>Russian / Русский</option>
+              <option>Ukrainian / Українська</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="message">What brings you here? <span class="field__opt">(share as little or as much as you like)</span></label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+          </div>
+          <button class="btn btn--primary btn--lg btn--block" type="submit" id="submitBtn">Send message</button>
+          <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
+          <p class="form-fine">Please don’t share urgent or emergency details here — see the crisis note below.</p>
+        </form>
+      </div>
+    </section>
+
+    <!-- ===================== CRISIS NOTE ===================== -->
+    <section class="crisis" aria-label="Crisis resources">
+      <div class="wrap">
+        <p><strong>In crisis or immediate danger?</strong> This website isn’t an emergency service. If you or someone you know is at risk, call <strong>911</strong>. For 24/7 support in BC, call or text <strong>988</strong> (Suicide Crisis Helpline), or call the <strong>BC Mental Health Support Line at 310-6789</strong> (no area code needed).</p>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="footer">
+    <div class="wrap footer__inner">
+      <div class="footer__brand">
+        <span class="brand__name">Hanna Katz, RCC</span>
+        <p>Art-based counselling for teens, young adults &amp; families.<br>Greater Vancouver, BC · Virtual sessions.</p>
+      </div>
+      <div class="footer__meta">
+        <p>Registered Clinical Counsellor · BCACC&nbsp;#29269</p>
+        <p>English · עברית · Русский · Українська</p>
+        <p><a id="linkedinLinkFooter" href="#" target="_blank" rel="noopener">LinkedIn</a></p>
+      </div>
+    </div>
+    <div class="wrap footer__legal">
+      <p>© <span id="year"></span> Hanna Katz. All rights reserved. The information on this site is for general purposes and is not a substitute for professional or emergency care.</p>
+    </div>
+  </footer>
+
+  <!-- Inline SVG defs (logo) -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <defs>
+      <symbol id="logo-tree" viewBox="0 0 40 40">
+        <path d="M20 33V20" stroke="#8a6b4f" stroke-width="2.4" stroke-linecap="round"/>
+        <path d="M20 33c-3 0-6 1-8 3M20 33c3 0 6 1 8 3M20 33v4" stroke="#8a6b4f" stroke-width="1.3" stroke-linecap="round" fill="none"/>
+        <circle cx="20" cy="14" r="11" fill="#bcd8c2"/>
+        <circle cx="15" cy="13" r="1.6" fill="#e08b7e"/>
+        <circle cx="25" cy="12" r="1.6" fill="#e3a92e"/>
+        <circle cx="20" cy="9" r="1.8" fill="#e08b7e"/>
+        <circle cx="23" cy="17" r="1.5" fill="#9bb6d6"/>
+        <circle cx="16" cy="18" r="1.5" fill="#c6a9d6"/>
+      </symbol>
+    </defs>
+  </svg>
+
+  <script src="config.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
