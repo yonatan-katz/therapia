@@ -2,6 +2,29 @@
 
 The site is a static site (no build step). `hannakatztherapy.com` is already on Cloudflare.
 
+## Option 0 — headless, one command (`tools/cf-deploy.sh`)
+Prereqs: a Cloudflare **API token** (Account → Cloudflare Pages: Edit; Zone → DNS: Edit on the
+domain) stored in the gitignored `indie/.env` as `CLOUDFLARE_API_TOKEN=...`. The account id is
+reused from `R2_ACCOUNT_ID` already in that file. Then:
+
+```bash
+bash tools/cf-deploy.sh      # uploads the site to the "therapia" Pages project (creates it on first run)
+```
+
+It prints a `*.pages.dev` URL. Attach the custom domain once (dashboard → the project → Custom
+domains → add `hannakatztherapy.com` + `www`), or via API:
+
+```bash
+# requires the same token exported as CLOUDFLARE_API_TOKEN and the account id
+curl -sX POST \
+  "https://api.cloudflare.com/client/v4/accounts/$ACCOUNT_ID/pages/projects/therapia/domains" \
+  -H "Authorization: Bearer $CLOUDFLARE_API_TOKEN" -H "Content-Type: application/json" \
+  --data '{"name":"hannakatztherapy.com"}'
+```
+
+The Git-connected project below (Option 1) is the alternative: no token, auto-deploys on push.
+
+
 ## 1. Create the Pages project (connect GitHub)
 1. Cloudflare dashboard → **Workers & Pages** → **Create** → **Pages** → **Connect to Git**.
 2. Authorise GitHub and pick the **`yonatan-katz/therapia`** repo.
