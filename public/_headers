@@ -1,8 +1,16 @@
-# Cloudflare Pages / Netlify headers file.
-# Long-cache fingerprint-free assets lightly; the HTML stays fresh.
+# Cloudflare Pages / Workers headers file.
+# Images rarely change -> cache a day. CSS/JS change during iteration ->
+# short cache so updates land within minutes (avoids stale-style mismatches).
+# HTML is served fresh by default.
 
-/assets/*
+/assets/img/*
   Cache-Control: public, max-age=86400
+
+/assets/css/*
+  Cache-Control: public, max-age=600
+
+/assets/js/*
+  Cache-Control: public, max-age=600
 
 /*
   X-Content-Type-Options: nosniff
