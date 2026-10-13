@@ -217,6 +217,7 @@ strong { font-weight: 700; color: var(--teal-d); }
 .form-status.is-ok { color: var(--teal); }
 .form-status.is-err { color: #b5542f; }
 .form-fine { margin: .8rem 0 0; }
+.hp { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; opacity: 0; }
 
 /* ---------- Crisis ---------- */
 .crisis { background: var(--ink); color: color-mix(in srgb, #fff 86%, transparent); padding: 1.4rem 0; font-size: .95rem; }

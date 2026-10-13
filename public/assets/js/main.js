@@ -104,6 +104,7 @@
         email: form.email.value.trim(),
         preferred_language: form.preferred_language.value,
         message: form.message.value.trim(),
+        _gotcha: form.elements["_gotcha"] ? form.elements["_gotcha"].value : "",
       };
 
       // Option A: Formspree (or compatible) endpoint

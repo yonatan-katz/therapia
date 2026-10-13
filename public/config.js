@@ -12,7 +12,7 @@ window.SITE_CONFIG = {
   //    form at https://formspree.io and paste its endpoint here, e.g.
   //    "https://formspree.io/f/abcdwxyz"). If left blank, the form falls
   //    back to opening the visitor's email app addressed to contactEmail.
-  formEndpoint: "",
+  formEndpoint: "https://formspree.io/f/mrpeavya",
 
   // 3. Email used for the mailto fallback (and shown nowhere else unless you
   //    choose to). Leave blank to hide the fallback entirely.

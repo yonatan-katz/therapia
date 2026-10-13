@@ -307,6 +307,9 @@
 
         <form class="contact__form" id="contactForm" novalidate>
           <div id="contact-form"></div>
+          <!-- Honeypot: hidden from people, bots that fill it get dropped. -->
+          <input type="text" name="_gotcha" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true" />
+
           <div class="field">
             <label for="name">Your name</label>
             <input id="name" name="name" type="text" autocomplete="name" required />
